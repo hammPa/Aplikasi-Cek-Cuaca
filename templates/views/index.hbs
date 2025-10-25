@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{> head }}
+<body>
+    <div class="main-content">
+        {{> header }}
+        <p>Gunakan website ini untuk menemukan informasi cuaca!</p>
+        <form>
+            <input type="text" placeholder="Masukkan Lokasi">
+            <button>Cari Lokasi</button>
+        </form>
+        <div class="weather-result">
+            <p id="pesan-1"></p>
+            <div id="pesan-2">
+                <div class="search-prompt">
+                    <p>Cari lokasi untuk melihat informasi cuaca</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer }}
+    <script src="/js/app.js"></script>
+</body>
+</html>

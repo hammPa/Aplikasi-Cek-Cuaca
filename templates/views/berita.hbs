@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+  {{> head }}
+  <body>
+    <div class="main-content">
+      {{> header }}
+      
+      <section class="news-section">
+        <div class="news-header">
+          <h1 class="news-title">Berita Cuaca</h1>
+          <p class="news-subtitle">Informasi cuaca terbaru dari Mediastack API</p>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading-container" id="loading">
+          <div class="spinner"></div>
+          <p>Memuat berita...</p>
+        </div>
+
+        <!-- Grid -->
+        <div class="news-grid" id="newsGrid"></div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+          <button class="pagination-btn" id="prevBtn" disabled>Sebelumnya</button>
+          <span class="page-info" id="pageInfo">Halaman 1</span>
+          <button class="pagination-btn" id="nextBtn">Selanjutnya</button>
+        </div>
+      </section>
+    </div>
+    {{> footer }}
+    <script src="/js/news.js"></script>
+  </body>
+</html>
