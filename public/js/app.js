@@ -56,10 +56,10 @@ window.addEventListener('DOMContentLoaded', () => {
                 
                 <div class="weather-details">
                     <div class="weather-detail-item">
-                        <div class="weather-detail-label">Terasa Seperti</div>
+                        <div class="weather-detail-label">Temperatur</div>
                         <div class="weather-detail-value">
                             <span class="weather-detail-icon">🌡️</span>
-                            ${weather.feelslike || weather.feels_like || 'N/A'}°C
+                            ${weather.temperature || weather.feelslike || 'N/A'}°C
                         </div>
                     </div>
                     
@@ -99,7 +99,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         <div class="weather-detail-label">Indeks UV</div>
                         <div class="weather-detail-value">
                             <span class="weather-detail-icon">☀️</span>
-                            ${weather.uv_index || weather.uv || 'N/A'}
+                            ${weather.uv_index ?? 'N/A'}
                         </div>
                     </div>
                 </div>
@@ -126,8 +126,6 @@ window.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch(`/infoCuaca?address=${encodeURIComponent(location)}`);
             const data = await response.json();
-            
-            console.log('Response data:', data); // Debug - lihat struktur data
             
             if (data.err) {
                 pesanSatu.textContent = data.err;

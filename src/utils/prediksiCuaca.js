@@ -13,8 +13,8 @@ const forecast = (latitude, longitude, callback) => {
             else {
                 const { current } = res.body;
                 const location = res.body.location;
-                console.log('Current weather data:', current);
-                console.log('Location data:', location);
+                // console.log('Current weather data:', current);
+                // console.log('Location data:', location);
                 
                 // Kirim object lengkap, bukan string
                 callback(undefined, {
