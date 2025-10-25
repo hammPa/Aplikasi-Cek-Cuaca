@@ -1,4 +1,4 @@
-# 🌦️ Aplikasi Cek Cuaca & Berita Terkini
+# 🌦️ Aplikasi Cek Cuaca
 
 Aplikasi web fullstack berbasis **Node.js (Express)** yang menampilkan:
 - Prediksi cuaca berdasarkan lokasi (menggunakan API cuaca)
