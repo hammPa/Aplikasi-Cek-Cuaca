@@ -124,7 +124,7 @@ window.addEventListener('DOMContentLoaded', () => {
         pesanDua.innerHTML = '';
         
         try {
-            const response = await fetch(`http://localhost:4000/infoCuaca?address=${encodeURIComponent(location)}`);
+            const response = await fetch(`/infoCuaca?address=${encodeURIComponent(location)}`);
             const data = await response.json();
             
             console.log('Response data:', data); // Debug - lihat struktur data
